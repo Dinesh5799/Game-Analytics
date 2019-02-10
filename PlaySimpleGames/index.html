@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game-Analytics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="app.js"></script>   
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">        
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <button class="btn-Reset" onclick="Reset()">Reset file</button>
+        <div class="file-uploader">            
+            <input type="file" id="filename" onchange="ReadCsvFile(event)" accept=".csv" class="filestyle" data-classButton="btn btn-primary" data-input="false" data-classIcon="icon-plus" data-buttonText="Your label here.">
+        </div>
+    </header>
+    <section class="Main-Section">
+        <div class="Sidebar">
+            <div class="View">
+                <button class="btn" onclick="DataFormatterForGraph('Country')">Country View</button>
+            </div>
+            <div class="View">
+                <button class="btn" onclick="DataFormatterForGraph('Game')">Game View</button>
+            </div>
+            <div class="View">
+                <button class="btn" onclick="DataFormatterForGraph('Both')">Country & Game View</button>
+            </div>
+        </div>
+        <div class="Chart-Area">
+            <div id="chartContainer"  class="Main-Chart"></div>        
+        </div>
+    </section>
+</body>
+</html>
