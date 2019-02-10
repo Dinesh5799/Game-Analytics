@@ -177,5 +177,7 @@ function getSum(total, num) {
 }
 function Reset(){
     document.getElementById('filename').value = '';
+    csvDataObj = [];
+    csvData = [];
     GraphRender();
 }
